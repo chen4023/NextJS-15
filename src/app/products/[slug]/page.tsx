@@ -1,10 +1,19 @@
 import { notFound } from 'next/navigation';
 import React from 'react';
+import { Metadata } from 'next';
 // 15 ver에서는 type 지정시 Promise로 감싸야함 
 type Props = {
-  params:
-  Promise<{ slug: string; }>
+  params: Promise<{ slug: string }>
 }
+
+// 동적 메타데이터
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params
+  return {
+    title: `${slug} 상세페이지`
+  }
+}
+
 // 동적 라우팅 -> 빌드시 페이지를 미리 만들어 둘 수 없음
 // 미리 만들어두고 싶으면 어떻게 해야해?
 export default async function PantsPage({ params }: Props) {
@@ -16,7 +25,7 @@ export default async function PantsPage({ params }: Props) {
   }
   return (
     <div>
-      {slug} Page
+      {slug} 제품 상세페이지
     </div>
   );
 }
