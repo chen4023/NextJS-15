@@ -6,7 +6,7 @@ type Props = {
   params: Promise<{ slug: string }>
 }
 
-// 동적 메타데이터
+// 동적 메타데이터 (generateMetadata)
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params
   return {

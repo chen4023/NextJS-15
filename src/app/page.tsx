@@ -1,5 +1,11 @@
+import Counter from "@/components/Counter";
+
 export default function Home() {
+  console.log('안녕! - 서버')
   return (
-    <h1>홈</h1>
+    <div>
+      홈페이지다!
+      <Counter />
+    </div>
   );
 }

@@ -12,13 +12,13 @@ export default function ProductsLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <>
+    <div>
       <nav className="flex gap-2 p-4 border border-pink-300 mt-1">
         <Link href='/products'>전체</Link>
         <Link href="/products/woman">여성용</Link>
         <Link href="/products/man">남성용</Link>
       </nav>
       <section className="p-4">{children}</section>
-    </>
+    </div>
   );
 }
