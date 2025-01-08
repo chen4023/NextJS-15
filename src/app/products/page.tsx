@@ -7,7 +7,6 @@ import React from 'react';
 
 export default async function ProductPage() {
   const products = await getProducts()
-
   return (
     <div>
       <h1 className='text-xl font-bold'>👚 제품 소개 페이지!</h1>
