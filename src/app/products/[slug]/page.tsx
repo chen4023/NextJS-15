@@ -4,9 +4,9 @@ import { Metadata } from 'next';
 import { getProduct, getProducts } from '@/service/products';
 // 15 ver에서는 type 지정시 Promise로 감싸야함 
 type Props = {
-  params: Promise<{ slug: string }>
+  params: { slug: string }
 }
-
+// ISR
 export const revalidate = 3
 
 // 동적 메타데이터 (generateMetadata)
