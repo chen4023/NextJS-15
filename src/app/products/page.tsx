@@ -10,7 +10,7 @@ import clothesImage from '../../../public/images/clothes.jpg'
 export default async function ProductPage() {
   const products = await getProducts()
   return (
-    <div>
+    <div className='font-mono'>
       <h1 className='text-xl font-bold'>👚 제품 소개 페이지!</h1>
       <Image src={clothesImage} alt='clothes' />
       <ul>

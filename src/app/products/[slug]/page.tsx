@@ -2,6 +2,8 @@ import { notFound } from 'next/navigation';
 import React from 'react';
 import { Metadata } from 'next';
 import { getProduct, getProducts } from '@/service/products';
+import Image from 'next/image';
+
 // 15 ver에서는 type 지정시 Promise로 감싸야함 
 type Props = {
   params: { slug: string }
@@ -31,6 +33,7 @@ export default async function ProductPage({ params }: Props) {
   return (
     <div>
       {product.name} 제품 상세페이지
+      <Image src={`/images/${product.image}`} alt={product.name} width='300' height='300' />
     </div>
   );
 }

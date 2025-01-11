@@ -22,6 +22,7 @@ export default function Error({
         onClick={
           () => reset()
         }
+        className='bg-gray-300 w-24 h-8 text-gray-800 rounded-md'
       >
         Try again
       </button>
