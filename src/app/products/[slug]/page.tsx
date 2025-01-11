@@ -7,7 +7,7 @@ import GoProductsButton from '@/components/GoProductsButton';
 
 // 15 ver에서는 type 지정시 Promise로 감싸야함 
 type Props = {
-  params: { slug: string }
+  params: Promise<{ slug: string }>
 }
 // ISR
 export const revalidate = 3
