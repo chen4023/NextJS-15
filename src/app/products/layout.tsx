@@ -13,7 +13,7 @@ export default function ProductsLayout({
 }>) {
   return (
     <div>
-      <nav className="flex gap-2 p-4 border border-pink-300 mt-1">
+      <nav className="flex gap-2 p-4 border border-pink-300 mt-1 font-do_hyeon">
         <Link href='/products'>전체</Link>
         <Link href="/products/woman">여성용</Link>
         <Link href="/products/man">남성용</Link>

@@ -1,21 +1,26 @@
 import type { Metadata } from "next";
-import { Inter, Roboto_Mono } from "next/font/google";
+import { Signika } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 
-const inter = Inter({
+// const inter = Inter({
+//   subsets: ['latin'],
+//   display: 'swap',
+//   variable: '--font-inter',
+// })
+
+// const roboto_mono = Roboto_Mono({
+//   subsets: ['latin'],
+//   display: 'swap',
+//   variable: '--font-roboto-mono',
+// })
+
+
+const signika = Signika({
   subsets: ['latin'],
   display: 'swap',
-  variable: '--font-inter',
+  variable: '--font-signika-mono',
 })
-
-const roboto_mono = Roboto_Mono({
-  subsets: ['latin'],
-  display: 'swap',
-  variable: '--font-roboto-mono',
-})
-
-
 export const metadata: Metadata = {
   title: "쇼팡몰 사이트",
   description: "제품을 판매하는 곳입니다.",
@@ -27,10 +32,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning className={`${inter.variable} ${roboto_mono.variable}`} >
-      <body>
+    <html lang="en" suppressHydrationWarning className={`${signika.variable}`} >
+      <body className="font-singika">
         <header className="flex justify-between items-center p-2 border">
-          <h1>Demo Note App</h1>
+          <Link href='/'>Demo Note App</Link>
           <nav className="flex gap-3">
             <Link href="/products">Products</Link>
             <Link href="/contact">Contact</Link>

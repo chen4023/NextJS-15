@@ -15,6 +15,7 @@ export default {
       fontFamily: {
         sans: ["var(--font-inter)"],
         mono: ["var(--font-roboto-mono)"],
+        singika: ["var(--font-signika-mono)"],
       },
     },
   },

@@ -16,15 +16,15 @@ export default function Error({
   }, [error])
 
   return (
-    <div>
-      <h2>Something went wrong!</h2>
+    <div className='h-[60vh] flex flex-col justify-center items-center'>
+      <h2>🚨 오류가 발생했습니다!</h2>
       <button
         onClick={
           () => reset()
         }
-        className='bg-gray-300 w-24 h-8 text-gray-800 rounded-md'
+        className='bg-red-500 text-white text-sm w-32 h-8 mt-3 rounded-md'
       >
-        Try again
+        다시 시도
       </button>
     </div>
   )
