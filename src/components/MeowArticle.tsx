@@ -10,7 +10,7 @@ export default function MeowArticle() {
       .then((data) => setText(data.data[0]))
   }, [])
   return (
-    <article className='m-3 p-2 bg-pink-200'>{text}</article>
+    <article className='m-3 p-2 bg-pink-100'>{text}</article>
   );
 }
 

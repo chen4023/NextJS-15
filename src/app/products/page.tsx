@@ -12,7 +12,7 @@ export default async function ProductPage() {
   return (
     <div className='font-mono'>
       <h1 className='text-xl font-bold'>👚 제품 소개 페이지!</h1>
-      <Image src={clothesImage} alt='clothes' />
+      <Image src={clothesImage} alt='clothes' className='h-64 w-64 my-3' />
       <ul>
         {products.map(({ id, name }, index) => (
           <li key={index}><Link href={`/products/${id}`}>● {name}</Link></li>

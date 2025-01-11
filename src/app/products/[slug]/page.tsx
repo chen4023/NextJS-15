@@ -1,8 +1,9 @@
-import { notFound } from 'next/navigation';
+import { redirect } from 'next/navigation';
 import React from 'react';
 import { Metadata } from 'next';
 import { getProduct, getProducts } from '@/service/products';
 import Image from 'next/image';
+import GoProductsButton from '@/components/GoProductsButton';
 
 // 15 ver에서는 type 지정시 Promise로 감싸야함 
 type Props = {
@@ -27,13 +28,18 @@ export default async function ProductPage({ params }: Props) {
   // ✅ 공식문서 :버전 14 및 이전 버전에서는 params동기식 prop이었습니다. 이전 버전과의 호환성을 위해 Next.js 15에서도 동기식으로 액세스할 수 있지만 이 동작은 향후 더 이상 지원되지 않습니다.
   const { slug } = await params
   const product = await getProduct(slug)
+  // 제공되는 상품 id가 아닌 경우 (동적 Redirect)
   if (!product) {
-    notFound()
+    redirect('/products')
+    // notFound()
   }
   return (
     <div>
-      {product.name} 제품 상세페이지
-      <Image src={`/images/${product.image}`} alt={product.name} width='300' height='300' />
+      <div className='flex flex-col'>
+        {product.name} 제품 상세페이지
+        <GoProductsButton />
+      </div>
+      <Image className='h-72' src={`/images/${product.image}`} alt={product.name} width='300' height='300' />
     </div>
   );
 }
