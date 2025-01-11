@@ -5,7 +5,7 @@ import Link from 'next/link';
 import React from 'react';
 import clothesImage from '../../../public/images/clothes.jpg'
 
-// export const revalidate = 3
+export const revalidate = 3
 
 export default async function ProductPage() {
   const products = await getProducts();

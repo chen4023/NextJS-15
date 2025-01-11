@@ -10,7 +10,6 @@ type Props = {
   params: Promise<{ slug: string }>
 }
 // ISR
-export const revalidate = 3
 
 // 동적 메타데이터 (generateMetadata)
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
